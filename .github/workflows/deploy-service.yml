@@ -50,7 +50,7 @@ jobs:
             --federated-credential-provider "github" \
             --tenant-id ${{ secrets.AZURE_TENANT_ID }}
       
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         if: ${{ inputs.skip-download != true }}
         with:
           name: build-${{ inputs.service-name }}
